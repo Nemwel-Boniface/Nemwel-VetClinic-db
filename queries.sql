@@ -1,3 +1,4 @@
 /*Queries that provide answers to the questions from all projects.*/
 
-SELECT * from animals WHERE name = 'Luna';
+-- Select all animals whose name is not Gabumon
+SELECT * FROM animals WHERE name != 'Gabumon';
