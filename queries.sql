@@ -9,6 +9,9 @@ SELECT name FROM animals WHERE date_of_birth BETWEEN '2016-01-01' AND '2019-01-0
 -- List the name of all animals that are neutered and have less than 3 escape attempts.
 SELECT name FROM animals WHERE neutered = TRUE AND escape_attempts < 3;
 
+-- List date of birth of all animals named either "Agumon" or "Pikachu".
+SELECT date_of_birth FROM animals WHERE name = 'Agumon' OR name = 'Pikachu';
+
 -- Select all from animals table which are neutered
 SELECT * FROM animals WHERE neutered = TRUE;
 
