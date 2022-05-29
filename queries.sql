@@ -20,3 +20,6 @@ SELECT * FROM animals WHERE neutered = TRUE;
 
 -- Select all animals whose name is not Gabumon
 SELECT * FROM animals WHERE name != 'Gabumon';
+
+-- Find all animals with a weight between 10.4kg and 17.3kg
+SELECT * FROM animals WHERE weight_kg >= 10.4 AND weight_kg <= 17.3;
