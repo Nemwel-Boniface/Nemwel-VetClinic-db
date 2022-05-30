@@ -11,3 +11,6 @@ CREATE TABLE IF NOT EXISTS animals (
 
 -- Update made the id column not null
 ALTER TABLE animals ALTER COLUMN id SET NOT NULL;
+
+-- Update made the id column the primary key for the table
+ALTER TABLE animals ADD PRIMARY KEY(id);
