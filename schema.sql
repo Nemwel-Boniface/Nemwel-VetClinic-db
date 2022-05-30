@@ -14,3 +14,6 @@ ALTER TABLE animals ALTER COLUMN id SET NOT NULL;
 
 -- Update made the id column the primary key for the table
 ALTER TABLE animals ADD PRIMARY KEY(id);
+
+--Update Add a column species of type string to your animals table.
+ALTER TABLE animals ADD COLUMN species VARCHAR(80);
