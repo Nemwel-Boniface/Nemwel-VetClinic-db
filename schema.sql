@@ -8,3 +8,6 @@ CREATE TABLE IF NOT EXISTS animals (
     neutered BOOLEAN,
     weight_kg NUMERIC
 );
+
+-- Update made the id column not null
+ALTER TABLE animals ALTER COLUMN id SET NOT NULL;
