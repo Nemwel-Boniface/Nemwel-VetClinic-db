@@ -10,3 +10,4 @@ INSERT INTO animals(id, name, date_of_birth, escape_attempts, neutered, weight_k
 INSERT INTO animals(id, name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES(8, 'Angemon', '2005-06-12', 1, TRUE, 45);
 INSERT INTO animals(id, name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES(9, 'Bourman', '2005-06-07', 7, TRUE, 20.4);
 INSERT INTO animals(id, name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES(10, 'Blossom', '1995-10-13', 3, TRUE, 17);
+INSERT INTO animals(id, name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES(11, 'Bitto', '2022-05-14', 4, TRUE, 22);
