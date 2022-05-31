@@ -90,3 +90,7 @@ UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
 
 -- Update commit transaction
 COMMIT;
+
+-- Update queries with aggregate functions with GROUP BY clause
+-- How many animals are there?
+SELECT COUNT(*) FROM animals;
