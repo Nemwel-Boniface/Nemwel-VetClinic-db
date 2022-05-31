@@ -52,3 +52,13 @@ UPDATE animals SET species = 'pokemon' WHERE name NOT LIKE '%mon';
 
 -- Update commit the changes to make sure they persists after the transaction
 COMMIT;
+
+-- DELETE all records and rollback in a transaction
+-- Start of the transaction
+BEGIN;
+
+-- Delete the records
+DELETE FROM animals;
+
+-- Confirm all animals were deleted
+SELECT * FROM animals;
