@@ -30,3 +30,6 @@ BEGIN;
 
 -- Update set the secies column values to unspecified
 UPDATE animals SET species = 'unspecified';
+
+-- Update confirm if changes made reflect in the database
+SELECT * FROM animals;
