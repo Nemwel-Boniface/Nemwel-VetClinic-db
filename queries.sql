@@ -62,3 +62,9 @@ DELETE FROM animals;
 
 -- Confirm all animals were deleted
 SELECT * FROM animals;
+
+-- Rollback
+ROLLBACK;
+
+-- Confirm all the information that was deleted is still present
+SELECT * FROM animals;
