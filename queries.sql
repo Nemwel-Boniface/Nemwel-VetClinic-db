@@ -81,3 +81,12 @@ SAVEPOINT savePoint;
 
 -- Update multiplied all animals weight to their weight times -1
 UPDATE animals SET weight_kg = weight_kg * -1;
+
+-- Update ROLLBACK TO savePoint
+ROLLBACK TO savePoint;
+
+-- Update all animals' weights that are negative to be their weight multiplied by -1.
+UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
+
+-- Update commit transaction
+COMMIT;
