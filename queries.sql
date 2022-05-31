@@ -68,3 +68,10 @@ ROLLBACK;
 
 -- Confirm all the information that was deleted is still present
 SELECT * FROM animals;
+
+-- Queries for third transaction
+-- Start of the transaction
+BEGIN;
+
+-- Update delete all animals born after January 01 2022
+DELETE FROM animals WHERE date_of_birth > '2022-01-01';
