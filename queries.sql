@@ -39,3 +39,10 @@ ROLLBACK;
 
 -- Update confirmation that the rollback was succesfull and no 'unspecified' text is in any row in species column
 SELECT * FROM animals;
+
+-- Update populate the species column now
+-- Start of the transaction
+BEGIN;
+
+-- Update the animals table by setting the species column to digimon for all animals that have a name ending in mon
+UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
