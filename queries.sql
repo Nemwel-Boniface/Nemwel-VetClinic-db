@@ -75,3 +75,9 @@ BEGIN;
 
 -- Update delete all animals born after January 01 2022
 DELETE FROM animals WHERE date_of_birth > '2022-01-01';
+
+-- Update create a savepoint for the transaction
+SAVEPOINT savePoint;
+
+-- Update multiplied all animals weight to their weight times -1
+UPDATE animals SET weight_kg = weight_kg * -1;
