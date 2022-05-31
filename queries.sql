@@ -33,3 +33,9 @@ UPDATE animals SET species = 'unspecified';
 
 -- Update confirm if changes made reflect in the database
 SELECT * FROM animals;
+
+-- Update rollback to undo the changes that have been made to the species column
+ROLLBACK;
+
+-- Update confirmation that the rollback was succesfull and no 'unspecified' text is in any row in species column
+SELECT * FROM animals;
