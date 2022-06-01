@@ -23,3 +23,10 @@ INSERT INTO owners(full_name, age) VALUES('Jodie Whittaker', 38);
 -- Update insert data into the species table
 INSERT INTO species(name) Values('Pokemon');
 INSERT INTO species(name) Values('Digimon');
+
+-- Modify your inserted animals so it includes the species_id value:
+-- Start the transaction for modifying the species_id column in animals table
+BEGIN;
+
+-- If the name ends in "mon" it will be Digimon
+UPDATE animals SET species_id = 2 WHERE name LIKE '%mon';
