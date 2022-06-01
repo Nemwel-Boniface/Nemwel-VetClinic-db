@@ -45,3 +45,6 @@ CREATE TABLE IF NOT EXISTS species(
 
 -- Update remove the species column from the animals table
 ALTER TABLE animals DROP COLUMN species CASCADE;
+
+-- Update Add column species_id to animals table
+ALTER TABLE animals ADD COLUMN species_id INT;
