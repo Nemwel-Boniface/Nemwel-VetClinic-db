@@ -46,14 +46,26 @@ CREATE TABLE IF NOT EXISTS species(
 -- Update remove the species column from the animals table
 ALTER TABLE animals DROP COLUMN species CASCADE;
 
+-- Update started the transaction for creating specied_id column to table
+BEGIN;
+
 -- Update Add column species_id to animals table
 ALTER TABLE animals ADD COLUMN species_id INT;
 
 -- Update made the species_id column a foreign key referencing species table
 ALTER TABLE animals ADD FOREIGN KEY(species_id) REFERENCES species(id);
 
+-- Update commited changes after making sure everything is fine
+COMMIT;
+
+-- Update started the transaction for creating specied_id column to table
+BEGIN;
+
 -- Update add a column called owber_id to animals table
 ALTER TABLE animals ADD COLUMN owner_id INT;
 
 -- Update made the owner_id a foreign key referencing the owners table
 ALTER TABLE animals ADD FOREIGN KEY(owner_id) REFERENCES owners(id);
+
+-- Update commited changes after making sure everything is fine
+COMMIT;
