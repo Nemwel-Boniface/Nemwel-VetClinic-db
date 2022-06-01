@@ -67,3 +67,13 @@ UPDATE animals SET owner_id = 4 WHERE name LIKE 'Squirtle';
 
 -- Blossom
 UPDATE animals SET owner_id = 4 WHERE name LIKE 'Blossom';
+
+-- Dean Winchester owns Angemon and Boarmon
+-- Angemon
+UPDATE animals SET owner_id = 5 WHERE name LIKE 'Angemon';
+
+-- Boarmon
+UPDATE animals SET owner_id = 5 WHERE name LIKE 'Bourman';
+
+-- Commited transaction to make sure it persisted
+COMMIT;
