@@ -128,3 +128,8 @@ SELECT (animals.name) AS animalName, (species.name) AS speciesName, full_name FR
 JOIN species ON animals.species_id = species.id
 JOIN owners ON animals.owner_id = owners.id
 WHERE species.id = 2 AND owner_id = 2;
+
+-- Update List all animals owned by Dean Winchester that haven't tried to escape.
+SELECT name, full_name FROM animals
+FULL OUTER JOIN owners ON animals.owner_id = owners.id
+WHERE escape_attempts = 0 AND owner_id = 5;
