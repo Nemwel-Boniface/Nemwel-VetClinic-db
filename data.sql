@@ -43,3 +43,10 @@ Begin;
 
 -- Update Sam Smith owns Agumon
 UPDATE animals SET owner_id = 1 WHERE name LIKE 'Agumon';
+
+-- Update Jennifer Orwell owns Gabumon and Pikachu
+-- Gabumon
+UPDATE animals SET owner_id = 2 WHERE name LIKE 'Gabumon';
+
+-- Pikachu
+UPDATE animals SET owner_id = 2 WHERE name LIKE 'Pikachu';
