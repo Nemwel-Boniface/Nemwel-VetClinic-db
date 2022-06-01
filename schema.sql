@@ -48,3 +48,6 @@ ALTER TABLE animals DROP COLUMN species CASCADE;
 
 -- Update Add column species_id to animals table
 ALTER TABLE animals ADD COLUMN species_id INT;
+
+-- Update made the species_id column a foreign key referencing species table
+ALTER TABLE animals ADD FOREIGN KEY(species_id) REFERENCES species(id);
