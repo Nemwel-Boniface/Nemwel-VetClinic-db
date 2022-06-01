@@ -42,3 +42,6 @@ CREATE TABLE IF NOT EXISTS species(
     name VARCHAR(40),
     PRIMARY KEY(id)
 );
+
+-- Update remove the species column from the animals table
+ALTER TABLE animals DROP COLUMN species CASCADE;
