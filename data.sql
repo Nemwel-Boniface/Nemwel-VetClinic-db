@@ -57,3 +57,13 @@ UPDATE animals SET owner_id = 3 WHERE name LIKE 'Devimon';
 
 -- Plantmon
 UPDATE animals SET owner_id = 3 WHERE name LIKE 'Plantmon';
+
+-- Melody Pond owns Charmander, Squirtle, and Blossom.
+-- Charmander
+UPDATE animals SET owner_id = 4 WHERE name LIKE 'Charmander';
+
+-- Squirtle
+UPDATE animals SET owner_id = 4 WHERE name LIKE 'Squirtle';
+
+-- Blossom
+UPDATE animals SET owner_id = 4 WHERE name LIKE 'Blossom';
