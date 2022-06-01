@@ -50,3 +50,10 @@ UPDATE animals SET owner_id = 2 WHERE name LIKE 'Gabumon';
 
 -- Pikachu
 UPDATE animals SET owner_id = 2 WHERE name LIKE 'Pikachu';
+
+-- Update Bob owns Devimon and Plantmon
+-- Devimon
+UPDATE animals SET owner_id = 3 WHERE name LIKE 'Devimon';
+
+-- Plantmon
+UPDATE animals SET owner_id = 3 WHERE name LIKE 'Plantmon';
