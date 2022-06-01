@@ -30,3 +30,9 @@ BEGIN;
 
 -- If the name ends in "mon" it will be Digimon
 UPDATE animals SET species_id = 2 WHERE name LIKE '%mon';
+
+-- All other animals are Pokemon
+UPDATE animals SET species_id = 1 WHERE name NOT LIKE '%mon';
+
+-- Update commit the transaction to make sure it persists
+COMMIT;
