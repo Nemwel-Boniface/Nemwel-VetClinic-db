@@ -3,9 +3,13 @@
 This database is of an imaginary Vet who wanted an easier way to manage his data. So far at this milestone I have been able to:
 - Create the Vet store database
 - Create the starter table(animals) which has information about 4 animals
+- Created owners table which has 6 owners
+- Created the species table which has 2 species
 - Write queries to aid in performing certain functionalities eg Query the db to show all the info about all animals.
 - Made use of BEGIN, SAVEPOINT, ROLLBACK and COMMIT transactions which help to avoid a situation where you might accidentally delete records you can revert to the original state.
 - Made use of the GROUP BY clause and aggregate functions to write complex queries to request filtered information from the database.
+- Made use of Primary and Foreign key concepts to link multiple tables
+- Made use os JOIN to work with multiple tables to retireve complex queries to get customixed information about a specific table
 
 
 Enjoy!
