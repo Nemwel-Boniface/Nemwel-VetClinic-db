@@ -117,5 +117,8 @@ SELECT name, full_name FROM animals JOIN owners ON animals.owner_id = owners.id 
 -- Update List of all animals that are pokemon (their type is Pokemon).
 SELECT animals.name FROM animals JOIN species ON animals.species_id = species.id WHERE animals.species_id = 1;
 
+-- List all owners and their animals, remember to include those that don't own any animal.
+SELECT full_name, name FROM owners FULL OUTER JOIN animals ON owners.id = animals.owner_id;
+
 -- How many animals are there per species
 SELECT COUNT(species_id), (species.name)  FROM animals JOIN species ON animals.species_id = species.id GROUP BY species.name;
