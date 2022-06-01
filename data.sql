@@ -36,3 +36,10 @@ UPDATE animals SET species_id = 1 WHERE name NOT LIKE '%mon';
 
 -- Update commit the transaction to make sure it persists
 COMMIT;
+
+-- Modify your inserted animals to include owner information (owner_id)
+-- Update start the transaction for adding owner id to animals table
+Begin;
+
+-- Update Sam Smith owns Agumon
+UPDATE animals SET owner_id = 1 WHERE name LIKE 'Agumon';
