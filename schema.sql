@@ -54,3 +54,6 @@ ALTER TABLE animals ADD FOREIGN KEY(species_id) REFERENCES species(id);
 
 -- Update add a column called owber_id to animals table
 ALTER TABLE animals ADD COLUMN owner_id INT;
+
+-- Update made the owner_id a foreign key referencing the owners table
+ALTER TABLE animals ADD FOREIGN KEY(owner_id) REFERENCES owners(id);
