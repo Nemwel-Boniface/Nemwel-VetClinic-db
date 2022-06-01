@@ -133,3 +133,9 @@ WHERE species.id = 2 AND owner_id = 2;
 SELECT name, full_name FROM animals
 FULL OUTER JOIN owners ON animals.owner_id = owners.id
 WHERE escape_attempts = 0 AND owner_id = 5;
+
+-- Who owns the most animals?
+SELECT full_name, COUNT(owner_id) AS Total_animals FROM owners
+JOIN animals ON  owners.id = animals.owner_id
+GROUP BY full_name
+ORDER BY COUNT(name) DESC;
