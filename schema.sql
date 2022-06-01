@@ -58,7 +58,7 @@ ALTER TABLE animals ADD FOREIGN KEY(species_id) REFERENCES species(id);
 -- Update commited changes after making sure everything is fine
 COMMIT;
 
--- Update started the transaction for creating specied_id column to table
+-- Update started the transaction for creating owner_id column to table
 BEGIN;
 
 -- Update add a column called owber_id to animals table
