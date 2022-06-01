@@ -122,3 +122,9 @@ SELECT full_name, name FROM owners FULL OUTER JOIN animals ON owners.id = animal
 
 -- How many animals are there per species
 SELECT COUNT(species_id), (species.name)  FROM animals JOIN species ON animals.species_id = species.id GROUP BY species.name;
+
+-- Update List all Digimon owned by Jennifer Orwell.
+SELECT (animals.name) AS animalName, (species.name) AS speciesName, full_name FROM animals
+JOIN species ON animals.species_id = species.id
+JOIN owners ON animals.owner_id = owners.id
+WHERE species.id = 2 AND owner_id = 2;
