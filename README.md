@@ -5,6 +5,8 @@ This database is of an imaginary Vet who wanted an easier way to manage his data
 - Create the starter table(animals) which has information about 4 animals
 - Created owners table which has 6 owners
 - Created the species table which has 2 species
+- Created the Visits table which is a join table for animals and vets table
+- Created the specializations table hich is a join table for species and vets tables
 - Write queries to aid in performing certain functionalities eg Query the db to show all the info about all animals.
 - Made use of BEGIN, SAVEPOINT, ROLLBACK and COMMIT transactions which help to avoid a situation where you might accidentally delete records you can revert to the original state.
 - Made use of the GROUP BY clause and aggregate functions to write complex queries to request filtered information from the database.
