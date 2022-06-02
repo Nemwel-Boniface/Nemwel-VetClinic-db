@@ -139,3 +139,12 @@ SELECT full_name, COUNT(owner_id) AS Total_animals FROM owners
 JOIN animals ON  owners.id = animals.owner_id
 GROUP BY full_name
 ORDER BY COUNT(name) DESC;
+
+-- Update Day 4 week 1 queries
+-- Update who was the last animal seen by William Tatcher
+SELECT (animals.name) AS animalName, (vets.name) AS vetsName, (visits.date_of_visit) AS dateVisited
+FROM animals
+JOIN visits ON animals.id = visits.animals_id
+JOIN vets ON vets.id = visits.vets_id
+WHERE vets_id = 1
+ORDER BY (visits.date_of_visit) DESC;
