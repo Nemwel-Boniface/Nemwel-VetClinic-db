@@ -96,3 +96,10 @@ INSERT INTO vets(name, age, date_of_graduation) VALUES('Jack Harkness', 38, '200
 
 -- Update commited the transaction to ensure it persists
 COMMIT;
+
+-- Update populate the specializations table with data
+-- Update start the transaction
+BEGIN;
+
+-- Update insert vet William secializes with pokemon
+INSERT INTO specializations(species_id, vet_id) VALUES(1, 1);
