@@ -156,3 +156,10 @@ INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(9,2,'2019-01-24');
 INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(9,2,'2019-05-15');
 INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(9,2,'2020-02-27');
 INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(9,2,'2020-08-03');
+
+-- Update include visists for Blossom
+INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(10,3,'2020-05-24');
+INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(10,1,'2021-01-11');
+
+-- Update commited transaction to make sure it persists
+COMMIT;
