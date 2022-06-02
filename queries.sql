@@ -161,3 +161,10 @@ SELECT (vets.name) as vets_name, (species.name) as vets_speciality
 FROM vets
 FULL OUTER JOIN specializations ON vets.id = specializations.vet_id
 FULL OUTER JOIN species ON species.id = specializations.species_id;
+
+-- Update list all animals that visited Stephanie Mendez between April 1st and August 30th, 2020
+SELECT (animals.name) AS animals_visited_Stephanie
+FROM animals
+FULL OUTER JOIN visits ON animals.id = visits.animals_id
+FULL OUTER JOIN vets ON vets.id = visits.vets_id
+WHERE vets.id = 3 AND visits.date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
