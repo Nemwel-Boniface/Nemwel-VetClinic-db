@@ -116,3 +116,11 @@ INSERT INTO specializations(species_id, vet_id) VALUES(2, 4);
 
 -- Update commit transaction to make sure it persists
 COMMIT;
+
+-- Update insert data for the visits table
+-- Update started the visits table transaction
+BEGIN;
+
+-- Update included data for Agumon
+INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(1,1,'2020-05-24');
+INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(1,3,'2020-07-22');
