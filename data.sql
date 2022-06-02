@@ -143,3 +143,6 @@ INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(5,4,'2021-02-24');
 INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(6,2,'2019-12-21');
 INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(6,1,'2020-08-10');
 INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(6,2,'2021-04-07');
+
+-- Update include visists for Squirtle
+INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(7,3,'2019-09-29');
