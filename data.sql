@@ -138,3 +138,8 @@ INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(4,3,'2021-05-04');
 
 -- Update include visists for Charmander
 INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(5,4,'2021-02-24');
+
+-- Update include visists for Plantmon
+INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(6,2,'2019-12-21');
+INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(6,1,'2020-08-10');
+INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(6,2,'2021-04-07');
