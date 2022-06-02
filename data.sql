@@ -110,3 +110,9 @@ INSERT INTO specializations(species_id, vet_id) VALUES(2, 3);
 
 -- Pokemon
 INSERT INTO specializations(species_id, vet_id) VALUES(1, 3);
+
+-- Update vet Jack specializes with digimons
+INSERT INTO specializations(species_id, vet_id) VALUES(2, 4);
+
+-- Update commit transaction to make sure it persists
+COMMIT;
