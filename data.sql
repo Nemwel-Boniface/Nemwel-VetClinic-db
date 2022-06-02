@@ -132,3 +132,6 @@ INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(2,4,'2021-02-02');
 INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(3,2,'2020-01-05');
 INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(3,2,'2020-03-08');
 INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(3,2,'2020-05-14');
+
+-- Update include visists for Devimon
+INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(4,3,'2021-05-04');
