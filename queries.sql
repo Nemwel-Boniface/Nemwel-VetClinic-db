@@ -148,3 +148,10 @@ JOIN visits ON animals.id = visits.animals_id
 JOIN vets ON vets.id = visits.vets_id
 WHERE vets_id = 1
 ORDER BY (visits.date_of_visit) DESC;
+
+-- How many different animals did Stephanie Mendez see?
+SELECT COUNT(visits.vets_id) AS Different_animals_seen, (vets.name) AS vets_name
+FROM visits
+JOIN vets ON visits.vets_id = vets.id
+WHERE vets.id = 3
+GROUP BY vets.name;
