@@ -103,3 +103,10 @@ BEGIN;
 
 -- Update insert vet William secializes with pokemon
 INSERT INTO specializations(species_id, vet_id) VALUES(1, 1);
+
+-- Udate insert vet stephanie specializes on:
+-- Digimon
+INSERT INTO specializations(species_id, vet_id) VALUES(2, 3);
+
+-- Pokemon
+INSERT INTO specializations(species_id, vet_id) VALUES(1, 3);
