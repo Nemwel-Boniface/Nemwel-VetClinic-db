@@ -84,3 +84,6 @@ BEGIN;
 
 -- Update insert first vets details
 INSERT INTO vets(name, age, date_of_graduation) VALUES('Willian Tatcher', 45, '2000-04-23');
+
+-- Update insert second vets details
+INSERT INTO vets(name, age, date_of_graduation) VALUES('Maisy Smith', 26, '2019-01-17');
