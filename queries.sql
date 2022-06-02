@@ -168,3 +168,10 @@ FROM animals
 FULL OUTER JOIN visits ON animals.id = visits.animals_id
 FULL OUTER JOIN vets ON vets.id = visits.vets_id
 WHERE vets.id = 3 AND visits.date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
+
+-- What animal has the most visits to vets?
+SELECT (animals.name) AS animals_name, COUNT(visits.animals_id) AS number_of_visits
+FROM animals
+FULL OUTER JOIN visits ON animals.id = visits.animals_id
+GROUP BY animals.name
+ORDER BY COUNT(visits.animals_id) DESC;
