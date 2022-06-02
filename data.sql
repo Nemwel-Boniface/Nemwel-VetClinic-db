@@ -90,3 +90,9 @@ INSERT INTO vets(name, age, date_of_graduation) VALUES('Maisy Smith', 26, '2019-
 
 -- Update insert third vets details
 INSERT INTO vets(name, age, date_of_graduation) VALUES('Stephanie Mendez', 64, '1981-05-4');
+
+-- Update insert third vets details
+INSERT INTO vets(name, age, date_of_graduation) VALUES('Jack Harkness', 38, '2008-06-08');
+
+-- Update commited the transaction to ensure it persists
+COMMIT;
