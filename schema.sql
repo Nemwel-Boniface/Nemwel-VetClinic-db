@@ -69,3 +69,20 @@ ALTER TABLE animals ADD FOREIGN KEY(owner_id) REFERENCES owners(id);
 
 -- Update commited changes after making sure everything is fine
 COMMIT;
+
+-- DAY 4 Week 1 challenges
+-- Update create table called vets
+-- Start the trsnsaction
+BEGIN;
+
+-- Update create the table vets with 4 columns
+CREATE TABLE IF NOT EXISTS vets (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(100),
+    age INT,
+    date_of_graduation DATE,
+    PRIMARY KEY(id)
+);
+
+-- Update commit to make sure transaction persists
+COMMIT;
