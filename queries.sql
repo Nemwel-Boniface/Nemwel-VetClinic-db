@@ -147,7 +147,8 @@ FROM animals
 JOIN visits ON animals.id = visits.animals_id
 JOIN vets ON vets.id = visits.vets_id
 WHERE vets_id = 1
-ORDER BY (visits.date_of_visit) DESC;
+ORDER BY (visits.date_of_visit) DESC
+LIMIT 1;
 
 -- How many different animals did Stephanie Mendez see?
 SELECT COUNT(visits.vets_id) AS Different_animals_seen, (vets.name) AS vets_name
@@ -174,7 +175,8 @@ SELECT (animals.name) AS animals_name, COUNT(visits.animals_id) AS number_of_vis
 FROM animals
 FULL OUTER JOIN visits ON animals.id = visits.animals_id
 GROUP BY animals.name
-ORDER BY COUNT(visits.animals_id) DESC;
+ORDER BY COUNT(visits.animals_id) DESC
+LIMIT 1;
 
 -- Who was Maisy Smith's first visit?
 SELECT (animals.name) AS animalName, (vets.name) AS vetsName, (visits.date_of_visit) AS dateVisited
@@ -182,7 +184,8 @@ FROM animals
 JOIN visits ON animals.id = visits.animals_id
 JOIN vets ON vets.id = visits.vets_id
 WHERE vets_id = 2
-ORDER BY (visits.date_of_visit);
+ORDER BY (visits.date_of_visit)
+LIMIT 1;
 
 -- Details for most recent visit: animal information, vet information, and date of visit
 SELECT (animals.name) AS animal_information, (vets.name) AS vet_information, (visits.date_of_visit) AS date_of_Visit
@@ -205,4 +208,5 @@ JOIN vets ON vets.id = visits.vets_id
 JOIN species  ON Species.id = animals.species_id
 WHERE vets.id = 2
 GROUP BY Species.name
-ORDER BY COUNT(animals.name) DESC;
+ORDER BY COUNT(animals.name) DESC
+LIMIT 1;
