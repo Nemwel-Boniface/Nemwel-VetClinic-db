@@ -102,3 +102,20 @@ CREATE TABLE IF NOT EXISTS specializations(
 
 -- Update commit transaction to make sure it persists
 COMMIT;
+
+-- Update create the visits table that has three columns and has two foreign keys
+-- Update start the transaction
+BEGIN;
+
+-- Update create the visists table
+CREATE TABLE IF NOT EXISTS visits(
+    animals_id INT,
+    vets_id INT,
+    date_of_visit DATE,
+    PRIMARY KEY(animals_id, vets_id, date_of_visit),
+    CONSTRAINT animal_id_fk FOREIGN KEY(animals_id) REFERENCES animals(id),
+    CONSTRAINT vet_id_fk FOREIGN KEY(vets_id) REFERENCES vets(id)
+);
+
+-- Update commit the transaction to make sure it persists
+COMMIT;
