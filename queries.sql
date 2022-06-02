@@ -183,3 +183,10 @@ JOIN visits ON animals.id = visits.animals_id
 JOIN vets ON vets.id = visits.vets_id
 WHERE vets_id = 2
 ORDER BY (visits.date_of_visit);
+
+-- Details for most recent visit: animal information, vet information, and date of visit
+SELECT (animals.name) AS animal_information, (vets.name) AS vet_information, (visits.date_of_visit) AS date_of_Visit
+FROM animals
+JOIN visits ON animals.id = visits.animals_id
+JOIN vets ON vets.id = visits.vets_id
+ORDER BY (visits.date_of_visit) DESC;
