@@ -86,3 +86,19 @@ CREATE TABLE IF NOT EXISTS vets (
 
 -- Update commit to make sure transaction persists
 COMMIT;
+
+-- Update created the specialization table to satisfy many to many relationship
+-- Update start transaction for specialization table
+BEGIN;
+
+-- Update create the specialization table with two columns and foreign key constraints
+CREATE TABLE IF NOT EXISTS specializations(
+    species_id INT,
+    vet_id INT,
+    PRIMARY KEY(species_id, vet_id),
+    CONSTRAINT species_id_fk FOREIGN KEY(species_id) REFERENCES species(id),
+    CONSTRAINT vet_id_fk FOREIGN KEY(vet_id) REFERENCES vets(id)
+);
+
+-- Update commit transaction to make sure it persists
+COMMIT;
