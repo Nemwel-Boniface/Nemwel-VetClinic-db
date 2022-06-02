@@ -150,3 +150,9 @@ INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(7,3,'2019-09-29');
 -- Update include visists for Angemon
 INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(8,4,'2020-10-03');
 INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(8,4,'2020-11-04');
+
+-- Update include visists for Boarman
+INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(9,2,'2019-01-24');
+INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(9,2,'2019-05-15');
+INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(9,2,'2020-02-27');
+INSERT INTO visits(animals_id, vets_id, date_of_visit) VALUES(9,2,'2020-08-03');
