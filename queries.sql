@@ -155,3 +155,9 @@ FROM visits
 JOIN vets ON visits.vets_id = vets.id
 WHERE vets.id = 3
 GROUP BY vets.name;
+
+-- uPDATE List all vets and their specialties, including vets with no specialties.
+SELECT (vets.name) as vets_name, (species.name) as vets_speciality
+FROM vets
+FULL OUTER JOIN specializations ON vets.id = specializations.vet_id
+FULL OUTER JOIN species ON species.id = specializations.species_id;
