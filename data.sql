@@ -77,3 +77,10 @@ UPDATE animals SET owner_id = 5 WHERE name LIKE 'Boarman';
 
 -- Commited transaction to make sure it persisted
 COMMIT;
+
+-- Update insert the vets details into the vets table now
+-- Update start the transaction of inserting vets details
+BEGIN;
+
+-- Update insert first vets details
+INSERT INTO vets(name, age, date_of_graduation) VALUES('Willian Tatcher', 45, '2000-04-23');
