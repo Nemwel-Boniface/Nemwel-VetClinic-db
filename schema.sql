@@ -69,3 +69,53 @@ ALTER TABLE animals ADD FOREIGN KEY(owner_id) REFERENCES owners(id);
 
 -- Update commited changes after making sure everything is fine
 COMMIT;
+
+-- DAY 4 Week 1 challenges
+-- Update create table called vets
+-- Start the trsnsaction
+BEGIN;
+
+-- Update create the table vets with 4 columns
+CREATE TABLE IF NOT EXISTS vets (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(100),
+    age INT,
+    date_of_graduation DATE,
+    PRIMARY KEY(id)
+);
+
+-- Update commit to make sure transaction persists
+COMMIT;
+
+-- Update created the specialization table to satisfy many to many relationship
+-- Update start transaction for specialization table
+BEGIN;
+
+-- Update create the specialization table with two columns and foreign key constraints
+CREATE TABLE IF NOT EXISTS specializations(
+    species_id INT,
+    vet_id INT,
+    PRIMARY KEY(species_id, vet_id),
+    CONSTRAINT species_id_fk FOREIGN KEY(species_id) REFERENCES species(id),
+    CONSTRAINT vet_id_fk FOREIGN KEY(vet_id) REFERENCES vets(id)
+);
+
+-- Update commit transaction to make sure it persists
+COMMIT;
+
+-- Update create the visits table that has three columns and has two foreign keys
+-- Update start the transaction
+BEGIN;
+
+-- Update create the visists table
+CREATE TABLE IF NOT EXISTS visits(
+    animals_id INT,
+    vets_id INT,
+    date_of_visit DATE,
+    PRIMARY KEY(animals_id, vets_id, date_of_visit),
+    CONSTRAINT animal_id_fk FOREIGN KEY(animals_id) REFERENCES animals(id),
+    CONSTRAINT vet_id_fk FOREIGN KEY(vets_id) REFERENCES vets(id)
+);
+
+-- Update commit the transaction to make sure it persists
+COMMIT;
