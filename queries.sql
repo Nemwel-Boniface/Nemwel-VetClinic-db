@@ -151,7 +151,7 @@ ORDER BY (visits.date_of_visit) DESC
 LIMIT 1;
 
 -- How many different animals did Stephanie Mendez see?
-SELECT COUNT(visits.vets_id) AS Different_animals_seen, (vets.name) AS vets_name
+SELECT COUNT(DISTINCT visits.animals_id) AS Different_animals_seen, (vets.name) AS vets_name
 FROM visits
 JOIN vets ON visits.vets_id = vets.id
 WHERE vets.id = 3
@@ -202,11 +202,11 @@ WHERE specializations.species_id IS NULL
 GROUP BY vets.name, specializations.species_id;
 
 -- What specialty should Maisy Smith consider getting? Look for the species she gets the most
-SELECT Species.name as speciesName, COUNT(animals.name) AS times_visited FROM animals
-FULL OUTER JOIN visits ON visits.animals_id = animals.id
-JOIN vets ON vets.id = visits.vets_id
-JOIN species  ON Species.id = animals.species_id
-WHERE vets.id = 2
-GROUP BY Species.name
-ORDER BY COUNT(animals.name) DESC
+SELECT (species.name) AS speciesName, COUNT(species.id)
+FROM animals
+FULL OUTER JOIN species ON animals.species_id = species.id
+JOIN visits ON animals.id = visits.animals_id
+WHERE visits.vets_id = 2
+GROUP BY species.name
+ORDER BY COUNT DESC
 LIMIT 1;
