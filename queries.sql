@@ -219,3 +219,9 @@ SELECT * FROM visits where vet_id = 2;
 
 -- Select specific owners who have this email 'owner_18327@mail.com'
 SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+-- Use Explain Analyse to monitor query speed of finding an email address in owners table
+EXPLAIN ANALYSE SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+--  Use Explain Analyse to monitor query speed of finding the vets id in vets table
+EXPLAIN ANALYSE SELECT * FROM visits where vets_id = 2;
