@@ -210,3 +210,12 @@ WHERE visits.vets_id = 2
 GROUP BY species.name
 ORDER BY COUNT DESC
 LIMIT 1;
+
+-- Use Explain Analyse to monitor query speed of finding specific animal with id 4
+EXPLAIN ANALYSE SELECT COUNT(*) FROM visits where animals_id = 4;
+
+-- Use Explain Analyse to monitor query speed of finding an email address in owners table
+EXPLAIN ANALYSE SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+--  Use Explain Analyse to monitor query speed of finding the vets id in vets table
+EXPLAIN ANALYSE SELECT * FROM visits where vets_id = 2;

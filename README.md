@@ -39,6 +39,13 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [@nemwel_bonie](https://twitter.com/nemwel_bonie)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/nemwel-nyandoro-aa1b2620b/)
 
+👤 **STEVE W DAMES JR**
+
+- GitHub: [@githubhandle](https://github.com/steveWDamesJr)
+- Twitter: [@twitterhandle](https://twitter.com/Steve88312331)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/steve-w-dames-jr/)
+
+
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/Nemwel-Boniface/Nemwel-VetClinic-db/issues).

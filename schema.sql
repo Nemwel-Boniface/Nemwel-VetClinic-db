@@ -109,13 +109,34 @@ BEGIN;
 
 -- Update create the visists table
 CREATE TABLE IF NOT EXISTS visits(
+    id INT GENERATED ALWAYS AS IDENTITY,
     animals_id INT,
     vets_id INT,
     date_of_visit DATE,
-    PRIMARY KEY(animals_id, vets_id, date_of_visit),
+    PRIMARY KEY(id,animals_id, vets_id, date_of_visit),
     CONSTRAINT animal_id_fk FOREIGN KEY(animals_id) REFERENCES animals(id),
     CONSTRAINT vet_id_fk FOREIGN KEY(vets_id) REFERENCES vets(id)
 );
 
+
 -- Update commit the transaction to make sure it persists
 COMMIT;
+
+-- Update added emails column to owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- This will add 3.594.280 visits considering you have 10 animals, 4 vets, and it will use around ~87.000 timestamps (~4min approx.)
+INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM (SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
+
+
+-- This will add 2.500.000 owners with full_name = 'Owner <X>' and email = 'owner_<X>@email.com' (~2min approx.)
+insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
+
+-- We create  an index feature for the owner_email column of owners table;
+CREATE INDEX owner_email ON owners(email ASC);
+
+-- We create  an index feature for the visits_index column of visits table
+CREATE INDEX visits_index ON visits(id ASC);
+
+-- We create  an index feature for the visits_index column of visits table for the animals_id
+CREATE INDEX visits_index ON visits(animals_id ASC);
