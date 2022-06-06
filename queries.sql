@@ -211,14 +211,8 @@ GROUP BY species.name
 ORDER BY COUNT DESC
 LIMIT 1;
 
--- See how many visits are for specific animal id is 4
-SELECT COUNT(*) FROM visits where animal_id = 4;
-
--- See number of visits to a vet where specific vet id is 2
-SELECT * FROM visits where vet_id = 2;
-
--- Select specific owners who have this email 'owner_18327@mail.com'
-SELECT * FROM owners where email = 'owner_18327@mail.com';
+-- Use Explain Analyse to monitor query speed of finding specific animal with id 4
+EXPLAIN ANALYSE SELECT COUNT(*) FROM visits where animal_id = 4;
 
 -- Use Explain Analyse to monitor query speed of finding an email address in owners table
 EXPLAIN ANALYSE SELECT * FROM owners where email = 'owner_18327@mail.com';
