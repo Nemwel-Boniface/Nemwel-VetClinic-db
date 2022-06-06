@@ -119,3 +119,6 @@ CREATE TABLE IF NOT EXISTS visits(
 
 -- Update commit the transaction to make sure it persists
 COMMIT;
+
+-- Update added emails column to owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
