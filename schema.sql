@@ -109,13 +109,15 @@ BEGIN;
 
 -- Update create the visists table
 CREATE TABLE IF NOT EXISTS visits(
+    id INT GENERATED ALWAYS AS IDENTITY,
     animals_id INT,
     vets_id INT,
     date_of_visit DATE,
-    PRIMARY KEY(animals_id, vets_id, date_of_visit),
+    PRIMARY KEY(id,animals_id, vets_id, date_of_visit),
     CONSTRAINT animal_id_fk FOREIGN KEY(animals_id) REFERENCES animals(id),
     CONSTRAINT vet_id_fk FOREIGN KEY(vets_id) REFERENCES vets(id)
 );
+
 
 -- Update commit the transaction to make sure it persists
 COMMIT;
