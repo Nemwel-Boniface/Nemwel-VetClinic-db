@@ -137,3 +137,6 @@ CREATE INDEX owner_email ON owners(email ASC);
 
 -- We create  an index feature for the visits_index column of visits table
 CREATE INDEX visits_index ON visits(id ASC);
+
+-- We create  an index feature for the visits_index column of visits table for the animals_id
+CREATE INDEX visits_index ON visits(animals_id ASC);
