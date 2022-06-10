@@ -16,7 +16,7 @@ This database is of an imaginary Vet who wanted an easier way to manage his data
 
 Enjoy!
 
-[Screenshot](./images/vetschema.png)
+![Screenshot](./images/vetschema.png)
 
 ## Getting Started
 
